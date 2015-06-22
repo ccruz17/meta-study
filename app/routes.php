@@ -11,4 +11,4 @@
 |
 */
 
-Route::get('/', 'InicioController@inicio');
+Route::get('/', 'IndexController@index');
