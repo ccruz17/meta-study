@@ -42,4 +42,10 @@ return array(
     'ContactUs' => 'Contact us',
     'AllRightsReserved' => 'All Rights Reserved.',
 
+    'SearchResults' => 'Search Results',
+    'SearchAgain' => 'Search again',
+    'AboutResults' =>'About :num results',
+    'SearchHistory' => 'Search history',
+    'SeeAll' => 'See all',
+
 );

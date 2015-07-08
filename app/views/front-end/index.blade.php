@@ -1,23 +1,22 @@
-@section('title', 'Inicio')
+@section('title', 'Home')
 @section('content')
     <!--=== Search Block ===-->
     <div class="search-block parallaxBg">
         <div class="container">
             <div class="col-md-6 col-md-offset-3">
                 <h1><?= trans('frontend.DiscoveryNewThings', array('span' => '<span class="color-green">', 'endSpan' => '</span>')) ?></h1>
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="<?= trans('frontend.SearchBox') ?>">
-                    <span class="input-group-btn">
-                        <button class="btn-u btn-u-lg" type="button"><i class="fa fa-search"></i></button>
-                    </span>
-                </div>
-
-                <form action="" class="sky-form page-search-form">
+                <form method="GET" action="<?= action('SearchController@search') ?>" class="sky-form page-search-form">
+                    <div class="input-group">
+                        <input type="text" name="q" class="form-control" placeholder="<?= trans('frontend.SearchBox') ?>">
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn-u btn-u-lg" type="button"><i class="fa fa-search"></i></button>
+                        </span>
+                    </div>
                     <div class="inline-group">
-                        <label class="checkbox"><input type="checkbox" name="checkbox-inline" checked><i></i><?= trans('frontend.All') ?></label>
-                        <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i><?= trans('frontend.Title') ?></label>
-                        <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i><?= trans('frontend.Author') ?></label>
-                        <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i><?= trans('frontend.Category') ?></label>
+                        <label class="checkbox"><input type="checkbox" name="filter" checked><i></i><?= trans('frontend.All') ?></label>
+                        <label class="checkbox"><input type="checkbox" name="filter"><i></i><?= trans('frontend.Title') ?></label>
+                        <label class="checkbox"><input type="checkbox" name="filter"><i></i><?= trans('frontend.Author') ?></label>
+                        <label class="checkbox"><input type="checkbox" name="filter"><i></i><?= trans('frontend.Category') ?></label>
                     </div>
                 </form>
             </div>

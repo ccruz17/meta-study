@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -12,3 +11,4 @@
 */
 
 Route::get('/', 'IndexController@index');
+Route::get('/search', 'SearchController@search');

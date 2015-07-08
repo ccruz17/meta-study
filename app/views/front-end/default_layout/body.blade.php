@@ -3,7 +3,7 @@
     <div class="header">
         <div class="container">
             <!-- Logo -->
-            <a class="logo" href="index.html">
+            <a class="logo" href="<?= action('IndexController@index') ?>">
                 <img src="assets/front-end/default_layout/img/logo1-teal.png" alt="Logo">
             </a>
             <!-- End Logo -->
@@ -44,12 +44,12 @@
 
                     <!-- Blog -->
                     <li>
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                        <a href="<?= action('IndexController@index') ?>">
                             <?= trans('frontend.Home'); ?>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/ccruz17/meta-study" class="dropdown-toggle" data-toggle="dropdown">
+                        <a href="https://github.com/ccruz17/meta-study" >
                             <?= trans('frontend.Github'); ?>
                         </a>
                     </li>
