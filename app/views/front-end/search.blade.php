@@ -3,10 +3,10 @@
     <!--=== Breadcrumbs ===-->
     <div class="breadcrumbs breadcrumbs-dark">
         <div class="container">
-            <h1 class="pull-left"><?= trans('frontend.SearchResults') ?></h1>
+            <h1 class="pull-left">{{ trans('frontend.SearchResults') }}</h1>
             <ul class="pull-right breadcrumb">
-                <li><a href="<?= action('IndexController@index') ?>"><?= trans('frontend.Home') ?></a></li>
-                <li class="active"><?= trans('frontend.SearchResults') ?></li>
+                <li><a href="{{ action('IndexController@index') }}">{{ trans('frontend.Home') }}</a></li>
+                <li class="active">{{ trans('frontend.SearchResults') }}</li>
             </ul>
         </div>
     </div>
@@ -15,19 +15,19 @@
     <div class="search-block-v2 parallaxBg">
         <div class="container">
             <div class="col-md-6 col-md-offset-3">
-                <h2><?= trans('frontend.SearchAgain') ?></h2>
-                <form method="GET" action="<?= action('SearchController@search') ?>" class="sky-form page-search-form">
+                <h2>{{ trans('frontend.SearchAgain') }}</h2>
+                <form method="GET" action="{{ action('SearchController@search') }}" class="sky-form page-search-form">
                     <div class="input-group">
-                        <input type="text" name="q" class="form-control" placeholder="<?= trans('frontend.SearchBox') ?>" value="<?= $q ?>">
+                        <input type="text" name="q" class="form-control" placeholder="{{ trans('frontend.SearchBox') }}" value="{{ $q }}">
                         <span class="input-group-btn">
                             <button type="submit" class="btn-u" type="button"><i class="fa fa-search"></i></button>
                         </span>
                     </div>
                     <div class="inline-group">
-                        <label class="checkbox"><input type="radio" name="by" value="all" <?= $by == 'all' ? 'checked': '' ?>><i></i><?= trans('frontend.All') ?></label>
-                        <label class="checkbox"><input type="radio" name="by" value="title" <?= $by == 'title' ? 'checked': '' ?>><i></i><?= trans('frontend.Title') ?></label>
-                        <label class="checkbox"><input type="radio" name="by" value="author" <?= $by == 'author' ? 'checked': '' ?>><i></i><?= trans('frontend.Author') ?></label>
-                        <label class="checkbox"><input type="radio" name="by" value="category" <?= $by == 'category' ? 'checked': '' ?>><i></i><?= trans('frontend.Category') ?></label>
+                        <label class="checkbox"><input type="radio" name="by" value="all" {{ $by == 'all' ? 'checked': '' }}><i></i>{{ trans('frontend.All') }}</label>
+                        <label class="checkbox"><input type="radio" name="by" value="title" {{ $by == 'title' ? 'checked': '' }}><i></i>{{ trans('frontend.Title') }}</label>
+                        <label class="checkbox"><input type="radio" name="by" value="author" {{ $by == 'author' ? 'checked': '' }}><i></i>{{ trans('frontend.Author') }}</label>
+                        <label class="checkbox"><input type="radio" name="by" value="category" {{ $by == 'category' ? 'checked': '' }}><i></i>{{ trans('frontend.Category') }}</label>
                     </div>
                 </form>
             </div>
@@ -40,52 +40,52 @@
             <div class="col-md-2 hidden-xs related-search">
                 <div class="row">
                     <div class="col-md-12 col-sm-4">
-                        <h3><?= trans('frontend.Repositories')?></h3>
+                        <h3>{{ trans('frontend.Repositories')}}</h3>
                         <ul class="list-unstyled">
-                            <li><a href="#"><?= trans('frontend.Repository')?></a></li>
-                            <li><a href="#"><?= trans('frontend.Repository')?></a></li>
-                            <li><a href="#"><?= trans('frontend.Repository')?></a></li>
+                            <li><a href="#">{{ trans('frontend.Repository')}}</a></li>
+                            <li><a href="#">{{ trans('frontend.Repository')}}</a></li>
+                            <li><a href="#">{{ trans('frontend.Repository')}}</a></li>
                         </ul>
-                        <a class="see-all" href="#"><?= trans('frontend.SeeAll')?></a>
+                        <a class="see-all" href="#">{{ trans('frontend.SeeAll')}}</a>
                         <hr>
                     </div>
 
                     <div class="col-md-12 col-sm-4">
-                        <h3><?= trans('frontend.Authors')?></h3>
+                        <h3>{{ trans('frontend.Authors')}}</h3>
                         <ul class="list-unstyled">
-                            <li><a href="#"><?= trans('frontend.Author')?></a></li>
-                            <li><a href="#">‎<?= trans('frontend.Author')?></a></li>
-                            <li><a href="#">‎<?= trans('frontend.Author')?></a></li>
+                            <li><a href="#">{{ trans('frontend.Author')}}</a></li>
+                            <li><a href="#">‎{{ trans('frontend.Author')}}</a></li>
+                            <li><a href="#">‎{{ trans('frontend.Author')}}</a></li>
                         </ul>
-                        <a class="see-all" href="#"><?= trans('frontend.SeeAll')?></a>
+                        <a class="see-all" href="#">{{ trans('frontend.SeeAll')}}</a>
                         <hr>
                     </div>
 
                     <div class="col-md-12 col-sm-4">
-                        <h3><?= trans('frontend.Categories')?></h3>
+                        <h3>{{ trans('frontend.Categories')}}</h3>
                         <ul class="list-unstyled">
-                            <li><a href="#"><?= trans('frontend.Category')?></a></li>
-                            <li><a href="#"><?= trans('frontend.Category')?></a></li>
-                            <li><a href="#"><?= trans('frontend.Category')?></a></li>
+                            <li><a href="#">{{ trans('frontend.Category')}}</a></li>
+                            <li><a href="#">{{ trans('frontend.Category')}}</a></li>
+                            <li><a href="#">{{ trans('frontend.Category')}}</a></li>
                         </ul>
-                        <a class="see-all" href="#"><?= trans('frontend.SeeAll')?></a>
+                        <a class="see-all" href="#">{{ trans('frontend.SeeAll')}}</a>
                         <hr>
                     </div>
 
                     <div class="col-md-12 col-sm-4">
-                        <h3><?= trans('frontend.SearchHistory') ?></h3>
+                        <h3>{{ trans('frontend.SearchHistory') }}</h3>
                         <ul class="list-unstyled">
                             <li><a href="#">Last search</a></li>
                             <li><a href="#">Last search</a></li>
                             <li><a href="#">Last search</a></li>
                         </ul>
-                        <a class="see-all" href="#"><?= trans('frontend.SeeAll')?></a>
+                        <a class="see-all" href="#">{{ trans('frontend.SeeAll')}}</a>
                     </div>
                 </div>
             </div><!--/col-md-2-->
 
             <div class="col-md-10">
-                <span class="results-number"><?= trans('frontend.AboutResults', array('num' =>number_format(17061990, 0, '', ','))) ?></span>
+                <span class="results-number">{{ trans('frontend.AboutResults', array('num' =>number_format(17061990, 0, '', ','))) }}</span>
                 <!-- Begin Inner Results -->
                 <div class="inner-results">
                     <h3><a href="#">Title</a></h3>
@@ -102,7 +102,7 @@
                                 <li><a data-placement="top" data-toggle="tooltip" class="tooltips" data-original-title="Linkedin" href="#"><i class="fa fa-linkedin-square"></i></a></li>
                             </ul>
                         </li>
-                        <li>Date - <?= trans('By') ?> Author or Authors</li>
+                        <li>Date - {{ trans('By') }} Author or Authors</li>
                         <li>Format</li>
                         <li><a href="#">Reporsitory</a></li>
                     </ul>

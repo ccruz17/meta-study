@@ -6,8 +6,8 @@
                 <!-- About -->
                 <div class="col-md-4 md-margin-bottom-40">
                     <a href="index.html"><img id="logo-footer" class="footer-logo" src="assets/front-end/default_layout//img/logo1-teal.png" alt=""></a>
-                    <p><?= trans('frontend.AboutMetaStudy1') ?></p>
-                    <p><?= trans('frontend.AboutMetaStudy2') ?></p>
+                    <p>{{ trans('frontend.AboutMetaStudy1') }}</p>
+                    <p>{{ trans('frontend.AboutMetaStudy2') }}</p>
                 </div><!--/col-md-3-->
                 <!-- End About -->
 
@@ -15,18 +15,18 @@
 
                 <!-- Link List -->
                 <div class="col-md-4 md-margin-bottom-40">
-                    <div class="headline"><h2><?= trans('frontend.UsefulLinks') ?></h2></div>
+                    <div class="headline"><h2>{{ trans('frontend.UsefulLinks') }}</h2></div>
                     <ul class="list-unstyled link-list">
-                        <li><a href="http://www.ccruz.ga"><?= trans('frontend.AboutMe') ?></a><i class="fa fa-angle-right"></i></li>
-                        <li><a href="https://github.com/ccruz17/meta-study"><?= trans('frontend.SeeOnGithub') ?></a><i class="fa fa-angle-right"></i></li>
-                        <li><a href="https://www.openarchives.org/pmh"><?= trans('frontend.OAIPMH') ?></a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="http://www.ccruz.ga">{{ trans('frontend.AboutMe') }}</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="https://github.com/ccruz17/meta-study">{{ trans('frontend.SeeOnGithub') }}</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="https://www.openarchives.org/pmh">{{ trans('frontend.OAIPMH') }}</a><i class="fa fa-angle-right"></i></li>
                     </ul>
                 </div><!--/col-md-3-->
                 <!-- End Link List -->
 
                 <!-- Address -->
                 <div class="col-md-4 map-img md-margin-bottom-40">
-                    <div class="headline"><h2><?= trans('frontend.ContactUs') ?></h2></div>
+                    <div class="headline"><h2>{{ trans('frontend.ContactUs') }}</h2></div>
                     <address class="md-margin-bottom-40">
                         11506, 12 Sur, Los Heroes <br />
                         Puebla, Puebla <br />
@@ -44,7 +44,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <p>
-                        2015 &copy; <?= trans('frontend.AllRightsReserved') ?>
+                        2015 &copy; {{ trans('frontend.AllRightsReserved') }}
                         <a href="http://www.ccruz.ga">CCRUZ</a>
                     </p>
                 </div>

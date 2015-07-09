@@ -3,7 +3,7 @@
     <div class="header">
         <div class="container">
             <!-- Logo -->
-            <a class="logo" href="<?= action('IndexController@index') ?>">
+            <a class="logo" href="{{ action('IndexController@index') }}">
                 <img src="assets/front-end/default_layout/img/logo1-teal.png" alt="Logo">
             </a>
             <!-- End Logo -->
@@ -13,18 +13,29 @@
                 <ul class="loginbar pull-right">
                     <li class="hoverSelector">
                         <i class="fa fa-globe"></i>
-                        <a><?= trans('frontend.Languages'); ?></a>
+                        <a>{{ trans('frontend.Languages'); }}</a>
                         <ul class="languages hoverSelectorBlock">
                             <li class="active">
-                                <a href="#"><?= trans('frontend.English'); ?> <i class="fa fa-check"></i></a>
+                                <a href="{{ action('IndexController@language', array('locale' => 'en')); }}">
+                                    {{ trans('frontend.English'); }}
+                                    @if(Lang::getLocale() == 'en')
+                                        <i class="fa fa-check"></i>
+                                    @endif
+                                </a>
                             </li>
-                            <li><a href="#"><?= trans('frontend.Spanish'); ?></a></li>
+                            <li><a href="{{ action('IndexController@language', array('locale' => 'es')); }}">
+                                    {{ trans('frontend.Spanish'); }}
+                                    @if(Lang::getLocale() == 'es')
+                                        <i class="fa fa-check"></i>
+                                    @endif
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <!--li class="topbar-devider"></li-->
                     <!--li><a href="page_faq.html">Help</a></li-->
                     <li class="topbar-devider"></li>
-                    <li><a href=""><?= trans('frontend.Login'); ?></a></li>
+                    <li><a href="">{{ trans('frontend.Login'); }}</a></li>
                 </ul>
             </div>
             <!-- End Topbar -->
@@ -44,13 +55,13 @@
 
                     <!-- Blog -->
                     <li>
-                        <a href="<?= action('IndexController@index') ?>">
-                            <?= trans('frontend.Home'); ?>
+                        <a href="{{ action('IndexController@index') }}">
+                            {{ trans('frontend.Home'); }}
                         </a>
                     </li>
                     <li>
                         <a href="https://github.com/ccruz17/meta-study" >
-                            <?= trans('frontend.Github'); ?>
+                            {{ trans('frontend.Github'); }}
                         </a>
                     </li>
                     <!-- End Blog -->
@@ -59,12 +70,12 @@
                     <li>
                         <i class="search fa fa-search search-btn"></i>
                         <div class="search-open">
-                            <form method="GET" action="<?= action('SearchController@search') ?>">
+                            <form method="GET" action="{{ action('SearchController@search') }}">
                                 <div class="input-group animated fadeInDown">
-                                    <input type="text" name="q" class="form-control" placeholder="<?= trans('frontend.Search'); ?>">
+                                    <input type="text" name="q" class="form-control" placeholder="{{ trans('frontend.Search'); }}">
                                     <input type="hidden" name="by" value="all">
                                     <span class="input-group-btn">
-                                        <button class="btn-u" type="submit"><?= trans('frontend.Go'); ?></button>
+                                        <button class="btn-u" type="submit">{{ trans('frontend.Go'); }}</button>
                                     </span>
                                 </div>
                             </form>

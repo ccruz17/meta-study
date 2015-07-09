@@ -4,19 +4,19 @@
     <div class="search-block parallaxBg">
         <div class="container">
             <div class="col-md-6 col-md-offset-3">
-                <h1><?= trans('frontend.DiscoveryNewThings', array('span' => '<span class="color-green">', 'endSpan' => '</span>')) ?></h1>
-                <form method="GET" action="<?= action('SearchController@search') ?>" class="sky-form page-search-form">
+                <h1>{{ trans('frontend.DiscoveryNewThings', array('span' => '<span class="color-green">', 'endSpan' => '</span>')) }}</h1>
+                <form method="GET" action="{{ action('SearchController@search') }}" class="sky-form page-search-form">
                     <div class="input-group">
-                        <input type="text" name="q" class="form-control" placeholder="<?= trans('frontend.SearchBox') ?>">
+                        <input type="text" name="q" class="form-control" placeholder="{{ trans('frontend.SearchBox') }}">
                         <span class="input-group-btn">
                             <button type="submit" class="btn-u btn-u-lg" type="button"><i class="fa fa-search"></i></button>
                         </span>
                     </div>
                     <div class="inline-group">
-                        <label class="checkbox"><input type="radio" name="by" value="all" checked><i></i><?= trans('frontend.All') ?></label>
-                        <label class="checkbox"><input type="radio" name="by" value="title"><i></i><?= trans('frontend.Title') ?></label>
-                        <label class="checkbox"><input type="radio" name="by" value="author"><i></i><?= trans('frontend.Author') ?></label>
-                        <label class="checkbox"><input type="radio" name="by" value="category"><i></i><?= trans('frontend.Category') ?></label>
+                        <label class="checkbox"><input type="radio" name="by" value="all" checked><i></i>{{ trans('frontend.All') }}</label>
+                        <label class="checkbox"><input type="radio" name="by" value="title"><i></i>{{ trans('frontend.Title') }}</label>
+                        <label class="checkbox"><input type="radio" name="by" value="author"><i></i>{{ trans('frontend.Author') }}</label>
+                        <label class="checkbox"><input type="radio" name="by" value="category"><i></i>{{ trans('frontend.Category') }}</label>
                     </div>
                 </form>
             </div>
@@ -116,8 +116,8 @@
                 <div class="section-block">
                     <div class="text-center">
                         <i class="rounded icon-custom icon-sm icon-bg-darker line-icon icon-graph"></i>
-                        <h2><?= trans('frontend.PopularSearch')?></h2>
-                        <p>. <a href="#"><?= trans('frontend.ViewMore') ?></a></p>
+                        <h2>{{ trans('frontend.PopularSearch')}}</h2>
+                        <p>. <a href="#">{{ trans('frontend.ViewMore') }}</a></p>
                     </div>
 
                     </br>
@@ -169,25 +169,25 @@
                 <li class="col-md-3 col-sm-6 col-xs-12 md-margin-bottom-30">
                     <div class="counters rounded">
                         <span class="counter">18298</span>
-                        <h4><?= trans('frontend.Repositories'); ?></h4>
+                        <h4>{{ trans('frontend.Repositories'); }}</h4>
                     </div>
                 </li>
                 <li class="col-md-3 col-sm-6 col-xs-12 md-margin-bottom-30">
                     <div class="counters rounded">
                         <span class="counter">24583</span>
-                        <h4><?= trans('frontend.Articles'); ?></h4>
+                        <h4>{{ trans('frontend.Articles'); }}</h4>
                     </div>
                 </li>
                 <li class="col-md-3 col-sm-6 col-xs-12 sm-margin-bottom-30">
                     <div class="counters rounded">
                         <span class="counter">37904</span>
-                        <h4><?= trans('frontend.Categories'); ?></h4>
+                        <h4>{{ trans('frontend.Categories'); }}</h4>
                     </div>
                 </li>
                 <li class="col-md-3 col-sm-6 col-xs-12">
                     <div class="counters rounded">
                         <span class="counter">50892</span>
-                        <h4><?= trans('frontend.Authors'); ?></h4>
+                        <h4>{{ trans('frontend.Authors'); }}</h4>
                     </div>
                 </li>
             </ul>
@@ -204,8 +204,8 @@
                     <div class="content-boxes-v3 block-grid-v1 rounded">
                         <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-line-chart"></i>
                         <div class="content-boxes-in-v3">
-                            <h3><a href="#"><?= trans('frontend.OAIPMH') ?></a></h3>
-                            <p><?= trans('frontend.DescriptionOAIPMH') ?></p>
+                            <h3><a href="#">{{ trans('frontend.OAIPMH') }}</a></h3>
+                            <p>{{ trans('frontend.DescriptionOAIPMH') }}</p>
                         </div>
                     </div>
                 </li>
@@ -213,8 +213,8 @@
                     <div class="content-boxes-v3 block-grid-v1 rounded">
                         <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-line-chart"></i>
                         <div class="content-boxes-in-v3">
-                            <h3><a href="#"><?= trans('frontend.OpenSource') ?></a></h3>
-                            <p><?= trans('frontend.DescriptionOpenSource') ?></p>
+                            <h3><a href="#">{{ trans('frontend.OpenSource') }}</a></h3>
+                            <p>{{ trans('frontend.DescriptionOpenSource') }}</p>
                         </div>
                     </div>
                 </li>
@@ -222,8 +222,8 @@
                     <div class="content-boxes-v3 block-grid-v1 rounded">
                         <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-line-chart"></i>
                         <div class="content-boxes-in-v3">
-                            <h3><a href="#"><?= trans('frontend.MetaSearch') ?></a></h3>
-                            <p><?= trans('frontend.DescriptionMetaSearch') ?></p>
+                            <h3><a href="#">{{ trans('frontend.MetaSearch') }}</a></h3>
+                            <p>{{ trans('frontend.DescriptionMetaSearch') }}</p>
                         </div>
                     </div>
                 </li>
@@ -240,10 +240,10 @@
                         <li class="item">
                             <img class="rounded-x img-bordered" src="assets/front-end/default_layout//img/team/img1-sm.jpg" alt="">
                             <div class="testimonials-v3-title">
-                                <p><?= trans('frontend.Me') ?></p>
-                                <span><?= trans('frontend.MeTitle') ?></span>
+                                <p>{{ trans('frontend.Me') }}</p>
+                                <span>{{ trans('frontend.MeTitle') }}</span>
                             </div>
-                            <p><?= trans('frontend.AboutThisProjectFromMe') ?></p>
+                            <p>{{ trans('frontend.AboutThisProjectFromMe') }}</p>
                         </li>
                     </ul>
                 </div>
