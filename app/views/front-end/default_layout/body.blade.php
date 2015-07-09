@@ -59,12 +59,15 @@
                     <li>
                         <i class="search fa fa-search search-btn"></i>
                         <div class="search-open">
-                            <div class="input-group animated fadeInDown">
-                                <input type="text" class="form-control" placeholder="<?= trans('frontend.Search'); ?>">
-                                <span class="input-group-btn">
-                                    <button class="btn-u" type="button"><?= trans('frontend.Go'); ?></button>
-                                </span>
-                            </div>
+                            <form method="GET" action="<?= action('SearchController@search') ?>">
+                                <div class="input-group animated fadeInDown">
+                                    <input type="text" name="q" class="form-control" placeholder="<?= trans('frontend.Search'); ?>">
+                                    <input type="hidden" name="by" value="all">
+                                    <span class="input-group-btn">
+                                        <button class="btn-u" type="submit"><?= trans('frontend.Go'); ?></button>
+                                    </span>
+                                </div>
+                            </form>
                         </div>
                     </li>
                     <!-- End Search Block -->

@@ -13,10 +13,10 @@
                         </span>
                     </div>
                     <div class="inline-group">
-                        <label class="checkbox"><input type="checkbox" name="filter" checked><i></i><?= trans('frontend.All') ?></label>
-                        <label class="checkbox"><input type="checkbox" name="filter"><i></i><?= trans('frontend.Title') ?></label>
-                        <label class="checkbox"><input type="checkbox" name="filter"><i></i><?= trans('frontend.Author') ?></label>
-                        <label class="checkbox"><input type="checkbox" name="filter"><i></i><?= trans('frontend.Category') ?></label>
+                        <label class="checkbox"><input type="radio" name="by" value="all" checked><i></i><?= trans('frontend.All') ?></label>
+                        <label class="checkbox"><input type="radio" name="by" value="title"><i></i><?= trans('frontend.Title') ?></label>
+                        <label class="checkbox"><input type="radio" name="by" value="author"><i></i><?= trans('frontend.Author') ?></label>
+                        <label class="checkbox"><input type="radio" name="by" value="category"><i></i><?= trans('frontend.Category') ?></label>
                     </div>
                 </form>
             </div>

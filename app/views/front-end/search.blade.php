@@ -12,16 +12,24 @@
     </div>
     <!--=== End Breadcrumbs ===-->
     <!--=== Search Block ===-->
-    <div class="search-block-v2">
+    <div class="search-block-v2 parallaxBg">
         <div class="container">
             <div class="col-md-6 col-md-offset-3">
                 <h2><?= trans('frontend.SearchAgain') ?></h2>
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="<?= trans('frontend.SearchBox') ?>">
-                    <span class="input-group-btn">
-                        <button class="btn-u" type="button"><i class="fa fa-search"></i></button>
-                    </span>
-                </div>
+                <form method="GET" action="<?= action('SearchController@search') ?>" class="sky-form page-search-form">
+                    <div class="input-group">
+                        <input type="text" name="q" class="form-control" placeholder="<?= trans('frontend.SearchBox') ?>" value="<?= $q ?>">
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn-u" type="button"><i class="fa fa-search"></i></button>
+                        </span>
+                    </div>
+                    <div class="inline-group">
+                        <label class="checkbox"><input type="radio" name="by" value="all" <?= $by == 'all' ? 'checked': '' ?>><i></i><?= trans('frontend.All') ?></label>
+                        <label class="checkbox"><input type="radio" name="by" value="title" <?= $by == 'title' ? 'checked': '' ?>><i></i><?= trans('frontend.Title') ?></label>
+                        <label class="checkbox"><input type="radio" name="by" value="author" <?= $by == 'author' ? 'checked': '' ?>><i></i><?= trans('frontend.Author') ?></label>
+                        <label class="checkbox"><input type="radio" name="by" value="category" <?= $by == 'category' ? 'checked': '' ?>><i></i><?= trans('frontend.Category') ?></label>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
