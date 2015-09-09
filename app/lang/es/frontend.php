@@ -47,5 +47,8 @@ return array(
     'AboutResults' =>'Alrededor de :num resultados',
     'SearchHistory' => 'Historial de busqueda',
     'SeeAll' => 'Ver todo',
+    'By' => 'Por',
+    'WithoutResults' => 'Sin resultados',
+    'BodyWithoutResults' => 'Lo sentimos, pero no hemos encontrado nada relacionado con el término de búsqueda.'
 
 );

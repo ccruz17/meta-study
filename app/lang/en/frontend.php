@@ -47,5 +47,9 @@ return array(
     'AboutResults' =>'About :num results',
     'SearchHistory' => 'Search history',
     'SeeAll' => 'See all',
+    'By' => 'By',
+    'WithoutResults' => 'Without Results',
+    'BodyWithoutResults' => 'Sorry, but we did not find anything related to your search term.'
+
 
 );
